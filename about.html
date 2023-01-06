@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <title>About Us</title>
+        <link rel="stylesheet" href="/style2.css">
+        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="/effects.css">
+    </head>
+    <body class="all">
+        <div id="progressBar"></div>
+        <div id="scrollPath"></div>
+        <div class="nouveau">
+            <nav>
+                <img src="images/menu.png" class="menu-img" alt="">
+                <img src="images/th.jpg" class="logo" alt="">
+                <ul>
+                    <li> <a href="/index.html">Home</a></li>
+                    <li><a href="/game.html">Game</a></li>
+                    <li><a href="https://tryhackme.com/">Learn</a></li>
+                    <li><a href="/awareness.html">Awareness</a></li>
+                    <li><a href="/signin.html">SigIn</a></li>
+                </ul>
+            </nav>
+        </div>
+        <section class="header">
+            <h2>Moral  Policies <br> And Values:</h2>
+                    <p>We don't hack for fun, we are purposefull. The reason we do is to bring peace and stability in the cyber kingdom.
+                     We are not logical, we are ethical. Our task is maintain equilibruim between our devices and us, stopping one from abusing the other.
+                     We take down the black hats, the bad guys, those who do what we do not for peace but their selfishness.<br>
+                    </p>
+        </section>
+        <div class="links slide-left">
+            <button class="colors">DISCOVER</button>
+             <button class="colors">CONTACT</button>
+                    
+        </div>
+        <script src="/effect.js"></script>
+        <script>
+            const buttons = document.getElementsByClassName('colors');
+            buttons.forEach(btn =>{
+                btn.addEventListener('click', function(e){
+                    let x = e.clientX - e.target.offsetLeft;
+                    let y = e.clientY - e.target.offsetTop;
+
+                    let ripples = document.createElement("span");
+                    ripples.style.left = x + 'px';
+                    ripples.style.top = y + 'px';
+                    this.appendChild(ripples);
+                })
+            })
+        </script>
+    </body>
+</html>
